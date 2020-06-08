@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         * {
+             margin: 0;
+             padding: 0;
+         }
+
+         .clock {
+              width: 300px;
+              height: 300px;
+              border: 2px solid #000;
+              margin: 150px auto;
+              border-radius: 50%;
+              position: relative;
+         }
+
+         .line {
+             width: 2px;
+             height: 300px;
+             background-color: #000;
+             position: absolute;
+             left: 50%;
+             transform: translate(-50%);
+         }
+
+       
+
+          .line:nth-child(2) {
+                transform: rotate(30deg);
+          }
+
+           .line:nth-child(3) {
+                 transform: rotate(60deg);
+           }
+
+            .line:nth-child(4) {
+                transform: rotate(90deg);
+            }
+
+             .line:nth-child(5) {
+                transform: rotate(120deg);
+             }
+
+              .line:nth-child(6) {
+                    transform: rotate(150deg);
+              }
+
+
+            .cover {
+                 width: 280px;
+                 height: 280px;
+                 background-color: #fff;
+                 border-radius: 50%;
+                 position: absolute;
+                 left: 50%;
+                 top: 50%;
+                 transform: translate(-50%, -50%);
+            }
+
+            .h {
+                height: 100px;
+                width: 5px;
+                background-color: green;
+                position: absolute;
+                left: 50%;
+                top: 40px;
+                transform: translate(-50%);
+                 transform-origin: bottom;
+                 animation: rotate 43200s linear infinite;
+            }
+            .m {
+                  height: 120px;
+                  width: 3px;
+                  background-color: pink;
+                  position: absolute;
+                  left: 50%;
+                  top: 20px;
+                  transform: translate(-50%);
+                  transform-origin: bottom;
+                  animation: rotate 3600s linear infinite;
+            }
+
+            /* 秒针 */
+            .s {
+                  height: 130px;
+                  width: 2px;
+                  background-color: skyblue;
+                  position: absolute;
+                  left: 50%;
+                  top: 10px;
+                  transform: translate(-50%);
+                  /* 修改旋转点的位置 */
+                  transform-origin: bottom;
+
+                  /* 调用动画 
+                    steps: 步
+                    注意：
+                    如果动画中使用了steps() 那么就不能使用linear
+                  */
+                  animation: rotate 60s steps(60) infinite;
+            }
+
+            .dotted {
+                width: 15px;
+                height: 15px;
+                background-color: #000;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+
+
+            /* 定义动画集 */
+            @keyframes  rotate {
+
+                 from {
+                     transform: translate(-50%) rotate(0deg);
+                 }
+                 to {
+
+                    transform: translate(-50%) rotate(360deg);
+                 }
+
+            }
+    </style>
+</head>
+<body>
+    
+       <div class="clock">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+
+            <div class="cover">
+                
+                  <!-- 时针 -->
+                  <div class="h"></div>
+                  <!-- 分针 -->
+                  <div class="m"></div>
+                  <!-- 秒针 -->
+                  <div class="s"></div>
+
+                  <!-- 小圆点 -->
+                  <div class="dotted"></div>
+
+            </div>
+       </div>
+</body>
+</html>

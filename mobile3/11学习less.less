@@ -1,0 +1,100 @@
+
+// less中的嵌套写法
+// .nav {
+//      width: 980px;
+//      height: 200px;
+
+//     ul {
+//         width: 100%;
+//         height: 200px;
+//         background-color: red;
+
+//         li {
+//             float: left;
+//             font-size: 20px;
+//             font-family: '微软雅黑';
+//         }
+//     } 
+// }
+
+// less中支持数学运算
+// .nav {
+//      width: 300px;
+
+//      ul {
+//           width: 100%;
+
+//           li {
+//                width: 300*7px;
+//           }
+//      }
+// }
+
+
+//less中可以支持变量的写法
+//变量（编程中的一个概念）： 容器
+
+//定义了一个变量（容器）
+// @fontColor: pink;
+
+// @bd: 1px solid red;
+// .nav {
+//     color: @fontColor;
+
+//     ul {
+//         li {
+//             color: @fontColor;
+
+//             border: @bd;
+
+//             a {
+//                 color: @fontColor;
+//             }
+//         }
+//     }
+// }
+
+
+//less中引用其他样式
+
+// .public {
+//     width: 200px;
+//     height: 200px;
+//     background-color: red;
+// }
+
+// .nav {
+//     // 调用已经写好的类样式
+//    .public;
+// }
+
+
+.public(@mywidth, @myheight, @bgc) {
+     width: @mywidth;
+     height: @myheight;
+     background-color: @bgc;
+}
+
+.public {
+    width: 100px;
+    height: 200px;
+    background-color: #000;
+}
+
+.nav {
+    .public;
+
+    // 或者
+
+    .public();
+}
+
+
+// .nav {
+//     .public(100px, 200px, red);
+// }
+
+
+// li {
+//     .public(50px, 60px, blue);
+// }

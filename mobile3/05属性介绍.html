@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+             /* width设置具体值的时候，不会跟随视口大小而改变 */
+             /* width: 500px; */
+
+             /* max-width: 当前元素的最大宽度是500，
+                如果视口的宽度超出500，那么当前元素的宽度就是最大值500了
+             */
+             /* max-width: 500px; */
+
+
+
+             /* min-width: 当前元素的最小宽度是500，如果视口大小比500还要小， */
+             /* 当前元素的大小就是500，如果视口变大，那么当前元素也会跟着变大 */
+             min-width: 500px;
+
+             height: 200px;
+             background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div></div>
+</body>
+</html>

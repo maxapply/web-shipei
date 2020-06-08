@@ -1,0 +1,47 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #999;
+  font-family: '微软雅黑';
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #999;
+}
+input,
+img {
+  vertical-align: middle;
+  border: 0 none;
+  outline-style: none;
+  padding: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.w {
+  width: 980px;
+  margin: 0 auto;
+}

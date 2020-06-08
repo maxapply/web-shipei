@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+             width: 200px;
+             height: 200px;
+             background-color: red;
+             margin: 200px auto;
+
+             /* 过渡：复合属性 */
+
+             /* 用来指定哪个属性有过渡的动画效果 默认值 all */
+             /* transition-property: background-color; */
+
+             /* 设置当前动画的完成时间 */
+             /* transition-duration: 1s; */
+
+             /* 设置动画的速度类型 默认值：ease */
+             /* transition-timing-function: linear; */
+
+             /* 设置动画延时效果 */
+             /* transition-delay: 2s; */
+
+
+
+             /* 合写以后的效果 */
+             transition: all 1s linear 2s;
+
+        }
+
+
+        .box:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+     <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+         * {
+             margin: 0;
+             padding: 0;
+             list-style: none;
+             text-decoration: none;
+         }
+
+         .nav {
+              width: 980px;
+              height: 60px;
+              background-color: pink;
+              margin: 50px auto;
+         }
+
+         .nav li {
+             width: 150px;
+             height: 60px;
+             line-height: 60px;
+             float: left;
+             text-align: center;
+             position: relative;
+             transform-style: preserve-3d;
+             transition: all 1s linear;
+         }
+         .nav a {
+              width: 150px;
+              height: 60px;
+              display: block;
+              position: absolute;
+         }
+
+         .nav li a:nth-child(1) {
+              transform: rotateX(90deg) translateZ(30px);
+              background-color: yellow;
+         }
+         .nav li a:nth-child(2) {
+             transform: translateZ(30px);
+             background-color: pink;
+          }
+
+          .nav li:hover {
+              transform: rotateX(-90deg);
+          }
+    </style>
+</head>
+<body>
+    
+     <div class="nav">
+          <ul>
+              <li>
+                  <a href="#">前端学院</a>
+                  <a href="#">web前端</a>
+                </li>
+              <li>
+                  <a href="#">前端学院</a>
+                  <a href="#">web前端</a>
+                </li>
+              <li>
+                  <a href="#">前端学院</a>
+                  <a href="#">web前端</a>
+              </li>
+          </ul>
+     </div>
+</body>
+</html>

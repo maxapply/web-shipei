@@ -1,0 +1,411 @@
+//默认就是PC端网页布局
+
+.top_nav {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+
+    li {
+        float: left;
+        line-height: 60px;
+        padding: 0 40px;
+        border-right: 1px solid #ccc;
+    }
+
+    li:last-child {
+         border-right: 0 none;
+
+         a {
+             padding: 10px;
+             display: block;
+             float: left;
+             text-align: center;
+
+            //  将父元素中的行高层叠掉
+             line-height: 1;
+
+             margin-top: 15px;
+         }
+
+         a:first-child {
+             background-color: red;
+             color: #fff;
+             border-radius: 5px;
+         }
+    }
+}
+
+// 主体导航
+.main_nav {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+    img {
+        width: 145px;
+    }
+    li {
+        float: left;
+        padding: 0 20px;
+    }
+}
+
+//主体广告区域
+.banner {
+     width: 100%;
+
+     img {
+         width: 100%;
+     }
+}
+
+//列表区域
+.lists {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+
+    .w {
+
+        display: flex;
+        // 设置元素在主轴方向两端对齐，中间自适应方式
+        justify-content: space-between;
+    }
+
+
+    dt {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    dd {
+        margin-top: 10px;
+    }
+}
+
+// 新闻广告区域
+.news {
+     width: 100%;
+     padding: 10px 0;
+     border-bottom: 1px solid #ccc;
+     p {
+         line-height: 30px;
+         span {
+             color: goldenrod;
+         }
+     }
+}
+
+//底部区域
+.footer {
+    width: 100%;
+    height: 500px;
+    background: url('../images/box-style-bg.png');
+
+    // 版心
+    .w {
+
+        // 第一个顶部导航盒子
+        .topNav {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            height: 60px;
+            line-height: 60px;
+
+            li {
+                float: left;
+                padding: 0 20px;
+            }
+
+            li:hover {
+                color: orange;
+                border-bottom: 1px solid red;
+            }
+        }
+
+        //第二个提示的盒子
+        .tips {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background-color: #fff;
+            margin-top: 25px;
+            padding-left: 25px;
+            box-sizing: border-box;
+            position: relative;
+
+            .sj {
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #fff;
+                position: absolute;
+                left: 25px;
+                top: -20px;
+            }
+        }
+
+        //卡片盒子
+        .cards {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            //每一个卡片的盒子
+            .item {
+                width: 33%;
+                height: 148px;
+                background-color: red;
+                margin-top: 20px;
+                padding: 10px;
+                box-sizing: border-box;
+
+                display: flex;
+
+                .litem {
+                    flex: 1;
+                    height: 100%;
+                    border-right: 1px dashed #ccc;
+                    position: relative;
+                }
+
+                .litem::before {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background: #f0f0f0;
+                    display: block;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -8px;
+                    top: -16px;
+                }
+
+                .litem::after {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background-color: #f0f0f0;
+                    display: block;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -8px;
+                    bottom: -16px;
+                }
+
+                .ritem {
+                    width: 110px;
+                    height: 100%;
+                }
+            }
+        }
+
+
+        .cards::after {
+            content: '';
+            width: 33%;
+            display: block;
+        }
+
+    }
+}
+
+// 隐藏导航
+.h_nav {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f8f8f8;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+
+
+// ipad设备
+@media only screen and (max-width: 1024px) {
+    
+    //顶部导航
+    .top_nav {
+
+        .w {
+            width: 768px;
+        }
+        li {
+            padding: 0 25px;
+        }
+
+    }
+
+
+    //主体导航
+    .main_nav {
+        .w {
+            width: 768px;
+        }
+        li {
+            padding: 0 12px;
+        }
+    }
+
+
+    // 列表区域
+    .lists {
+        .w {
+            width: 768px;
+        }
+    }
+
+
+    // 新闻区域
+    .news {
+        .w {
+            width: 768px;
+
+            padding: 0 10px;
+
+            box-sizing: border-box;
+        }
+    }
+
+    //底部区域
+    .footer {
+        .w {
+            width: 768px;
+
+
+            .cards {
+
+                .item {
+                    width: 49%;
+                }
+            }
+        }
+    }
+}
+
+//移动端布局
+@media only screen and (max-width: 414px) {
+   
+    //显示隐藏的导航
+    .h_nav {
+        display: block;
+    }
+   
+   
+    //顶部导航
+    .top_nav {
+        display: none;
+    }
+    //主体导航
+    .main_nav {
+        display: none;
+    }
+
+    //广告区域
+    .banner {
+        margin-top: 60px;
+    }
+
+
+
+    //列表区域
+    .lists {
+        display: none;
+    }
+    // 新闻区域
+    .news {
+        .w {
+            width: 100%;
+        }
+        p {
+            line-height: 20px;
+        }
+    }
+
+    //底部区域
+    .footer {
+        .w {
+            width: 100%;
+            //顶部导航
+            .topNav {
+                // 当子元素超出父元素时候，给父元素动态添加滚动条
+                overflow: auto;
+                ul {
+                    //目的：为了让li始终在一行上显示
+                    width: 668px;
+                }
+            }
+
+            // 卡片
+             .cards {
+
+                 .item {
+                     width: 100%;
+                 }
+             }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//====== 如下写法也可以
+
+// 移动设备
+// @media only screen and (min-width: 320px) and (max-width: 414px) {
+//     div {
+//         width: 100%;
+//         height: 200px;
+//         background-color: blue;
+//     }
+// }
+
+
+// //IPad端的网页布局,当满足条件才会执行
+// @media only screen and (min-width: 415px) and (max-width: 1024px) {
+//     div {
+//         width: 100%;
+//         height: 200px;
+//         background-color: red;
+//     }
+// }
+
+
+

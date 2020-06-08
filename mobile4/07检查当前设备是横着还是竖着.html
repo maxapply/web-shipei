@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+         @media  screen and (orientation:landscape) {
+             /* 代表当前设备处于横屏模式下 */
+             div {
+                 width: 100%;
+                 height: 200px;
+                 background-color: red;
+             }
+         }
+
+
+         @media  screen and (orientation: portrait) {
+             /* 代表当前设备是一个竖屏显示 */
+             div {
+                  width: 100%;
+                  height: 200px;
+                  background-color: green;
+             }
+         }
+    </style>
+</head>
+<body>
+    
+     <!-- 当在横屏模式下，元素的背景颜色是红色
+    
+          当前在竖屏模式下，元素的背景颜色是绿色
+    -->
+     <div></div>
+</body>
+</html>

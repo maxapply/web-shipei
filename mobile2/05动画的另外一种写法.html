@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         * {
+             margin: 0;
+             padding: 0;
+         }
+
+         .box {
+              width: 200px;
+              height: 200px;
+              background-color: red;
+
+
+              animation: move 10s;
+         }
+
+         @keyframes move {
+
+            /* 百分比的是相对动画整个执行时间的 */
+             0% {
+                 transform: translate(0px);
+             }
+
+             50% {
+
+             }
+
+             70% {
+                 
+             }
+
+             100% {
+                transform: translate(800px);
+             }
+
+         }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+             width: 200px;
+             height: 200px;
+             background-color: red;
+             /* 调用动画集 */
+             /* 通过动画名称调用动画集 */
+             animation-name: boxMove;
+             /* 设置动画时间 */
+             animation-duration: 1s;
+             /* 设置动画执行次数 默认值是 1， 也可以自定义次数   infinite[无限次执行]
+
+                iteration[ɪtəˈreɪʃn]
+
+                infinite[ˈɪnfɪnət]
+             */
+             animation-iteration-count: 1;
+             /* 设置动画来回都有动画效果 偶数次
+             
+                direction[dəˈrekʃn]
+             */
+             animation-direction: alternate;
+             
+             /* 设置动画的速度类型 
+                ease: 默认值    从快到慢
+
+                linear: 匀速完成
+
+                ease-in: 速度是由慢到快（加速）
+
+                ease-out: 速度是由快到慢（减速）
+
+                ease-in-out：先加速再减速
+
+                function[ˈfʌŋkʃn]
+             */
+             animation-timing-function:  linear;
+
+             /* 设置动画延时执行 */
+             animation-delay: 1s;
+
+             /* 设置动画在结束位置停止 forwards*/
+             animation-fill-mode: forwards;
+        }
+        /* 问题：让当前元素从自己本来的位置，向右移动800px 
+            1.  通过位移的方式移动800px (2d)
+            2.  通过定位的方式移动800px
+            3.  通过margin的方式移动800px
+        */
+        /* 1.定义动画集 */
+        @keyframes boxMove {
+            /* 动画的开始 */
+            from {
+                transform: translate(0px);
+            }
+            /* 动画的结束 */
+            to {
+                transform: translate(800px);
+            }
+        }
+   
+    </style>
+</head>
+<body>
+    
+      <div class="box"></div>
+</body>
+</html> 

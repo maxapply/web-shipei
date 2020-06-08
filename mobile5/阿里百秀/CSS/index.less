@@ -1,0 +1,151 @@
+.main_body {
+    padding: 0;
+    // 第一个盒子
+    .litem {
+        padding: 0;
+        .top1 {
+             width: 100%;
+             background: blue;
+             img {
+                 width: 100%;
+             }
+        }
+
+        ul {
+            height: 250px;
+            background-color: #ccc;
+            
+            li {
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                padding-left: 30px;
+            }
+
+            li:hover {
+                background:  orange;
+            }
+        }
+    }
+
+    //第二个盒子
+    .mitem {
+       
+        // 上盒子结束
+        .top_img {
+            width: 100%;
+            height: 256px;
+            border-bottom: 1px solid #ccc;
+
+
+            .left_img {
+                float: left;
+                height: 100%;
+                width: 50%;
+
+                img {
+                     width: 100%;
+                }
+            }
+
+            .right_img {
+                float: left;
+                width: 50%;
+                height: 100%;
+
+                a {
+                     width: 50%;
+                     height: 128px;
+                     display: block;
+                     float: left;
+                    //  padding: 10px;
+                     padding-left: 10px;
+                     padding-bottom: 10px;
+                     box-sizing: border-box;
+
+                     img {
+                          width: 100%;
+                          height: 100%;
+                     }
+                }
+            }
+        }
+
+        //下内容盒子
+        .content {
+             width: 100%;
+
+
+             .item {
+                 border-bottom: 1px solid #ccc;
+
+
+                 .left_text {
+                     padding: 0;
+
+                     .pub {
+                         font-size: 12px;
+                     }
+                 }
+
+
+                 .right_img {
+                     padding: 0;
+
+
+                     img {
+                          width: 100%;
+                     }
+                 }
+             }
+        }
+    }
+
+    //第三个盒子
+    .ritem {
+       
+        .right_top {
+            width: 100%;
+
+            img {
+                 width: 100%;
+            }
+        }
+
+
+        .right_bottom {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+
+//手动适配移动端
+@media only screen and (max-width: 767px) {
+
+    .main_body {
+        
+        .mitem {
+            padding: 0;
+        }
+
+        .ritem {
+            padding: 0;
+        }
+        .litem {
+            ul {
+                height: 50px;
+                li {
+                    float: left;
+                    padding: 0;
+                    width: 20%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

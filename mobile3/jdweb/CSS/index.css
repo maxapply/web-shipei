@@ -1,0 +1,151 @@
+
+.main_body {
+     width: 100%;
+     /* 如果视口超出750px,那么就让当前盒子的最大宽度是750px */
+     max-width: 750px;
+     /* 如果视口比320还要小，那么当前盒子的宽度就是320px */
+     min-width: 320px;
+     margin: 0 auto;
+}
+
+/* 顶部搜索区域 */
+.top_search {
+     width: 100%;
+     max-width: 750px;
+     min-width: 320px;
+     height: 40px;
+     background-color: rgba(201, 21, 35, 1);
+     position: fixed;
+     left: 50%;
+     top: 0;
+     transform: translate(-50%);
+     padding-left: 60px;
+     padding-right: 60px;
+     box-sizing: border-box;
+}
+
+.seatch {
+     width: 100%;
+     position: relative;
+}
+
+.seatch input {
+     width: 100%;
+     height: 30px;
+     margin-top: 5px;
+     border-radius: 15px;
+     padding-left: 30px;
+     box-sizing: border-box;
+}
+
+.seatch span {
+     width: 19px;
+     height: 21px;
+     display: block;
+     background: url('../img/jd-sprites.png') no-repeat -60px -110px;
+
+     background-size: 200px 200px;
+
+     position: absolute;
+     left: 10px;
+     top: 10px;
+}
+
+
+.logo {
+    width: 57px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    /* 设置精灵图背景图 */
+    background: url('../img/jd-sprites.png') no-repeat 0 -109px;
+    /* 修改背景图片大小 */
+    background-size: 200px 200px;
+}
+
+.login {
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    text-align: center;
+    line-height: 40px;
+    
+}
+
+
+.login a {
+color: #fff;
+}
+
+
+
+/* 主体广告区域 */
+.banner {
+      width: 100%;
+      margin-top: 40px;
+}
+
+.banner img {
+      width: 100%;
+}
+
+
+/* 主体导航区域 */
+.nav {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+}
+.nav ul {
+     width: 100%;
+}
+.nav li {
+      float: left;
+      width: 25%;
+      text-align: center;
+}
+
+.nav li img {
+      width: 50px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+}
+
+
+/* 商品展示区域 */
+.products {
+     width: 100%;
+}
+
+
+.products li {
+      width: 50%;
+      float: left;
+      padding: 0 10px;
+      box-sizing: border-box;
+}
+
+.products li img {
+      width: 100%;
+}
+
+.products li p {
+      border-bottom: 1px solid #000;
+      height: 40px;
+      /* 将超出的文字隐藏 */
+      overflow: hidden;
+      /* 将超出的文字以省略号显示： 非标准属性 */
+      text-overflow: ellipsis;
+      /* 要设置显示多少行 */
+      -webkit-line-clamp: 2;
+      /* 让文字垂直显示 */
+      -webkit-box-orient: vertical;
+      /* 将当前元素转化为弹性盒子 */
+      display: -webkit-box;
+      /* 让文字在末尾处换行 */
+      word-break: break-all;
+}

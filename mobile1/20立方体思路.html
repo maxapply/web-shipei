@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box { 
+             width: 300px;
+             height: 300px;
+             margin: 100px auto;
+             position: relative;
+             /* 设置当前元素为立体元素 */
+             transform-style: preserve-3d;
+             transform: rotateX(80deg)  rotateY(80deg);
+        }
+
+        .box .public {
+              width: 300px;
+              height: 300px;
+              position: absolute;
+        }
+
+        .left {
+             background-color: red;  
+             transform: rotateY(-90deg) translateZ(150px);
+        }
+        .right {
+            background-color: orange;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .top {
+            background-color: yellow;
+
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        
+        .bottom {
+            background-color: green;
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .before {
+            background-color: blue;
+
+            transform: translateZ(150px);
+        }
+
+        .back {
+            background-color: purple;
+
+            transform: translateZ(-150px);
+        }
+    </style>
+</head>
+<body>
+    
+
+        <div class="box">
+            <div class="public left"></div>
+            <div class="public right"></div>
+            <div class="public top"></div>
+            <div class="public bottom"></div>
+            <div class="public before"></div>
+            <div class="public back"></div>
+        </div>
+       
+
+
+
+    <!-- 思路：
+    
+         1. 准备6个盒子
+
+         2. 通过绝对定位将6个盒子叠到一块
+
+         3. 左右面  --》 沿着y轴旋转，再位移
+
+         4. 上下面   ---》 沿着X轴旋转，再位移
+
+         5. 前后面   ---》 直接位移
+    -->
+</body>
+</html>

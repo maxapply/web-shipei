@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  width: 100%;
+  display: flex;
+}
+.title a {
+  flex: 1;
+}
+.title a img {
+  width: 100%;
+}
